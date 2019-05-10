@@ -1,0 +1,117 @@
+
+body{
+    width:100%;
+    background-color: cyan;    
+}
+.box1{
+    display: block;
+    background-color: lightblue;
+    height: 500px;
+    width: 50%;
+    padding:2%;
+    margin: 10% auto;
+    text-align: center;
+}
+.select{
+    background-color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+    line-height: 25px;
+    height: 50px;
+    width: 400px;
+    float: none;
+}
+.select:hover{
+    background-color: white;
+}
+.selector option {
+    padding: 3px;
+}
+.selectNew{
+    display:none;
+    position: relative;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    text-align: left;
+    margin: 0 15%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown {
+    position: relative;
+    display: block;
+  }
+.dropbtn {
+    background-color: white;
+    position: relative;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin: 0 15%;
+}
+.dropbtn::after {
+    position: absolute;
+    content: "";
+    width: 0; 
+    height: 0; 
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid grey;
+  }
+  .dropbtn::before {
+    position: absolute;
+    content:"";
+    width: 0;
+    height: 0;
+    border: 8px solid ;
+    border-color: inherit; 
+    border-radius: 10px;
+    left: 20px;
+    
+}
+
+.dropbtn:hover {
+    cursor:pointer;
+    background-color: #ddd6d6;
+} 
+.selectNew .optionI {
+    position: relative;
+    display: block;
+} 
+.selectNew li:hover {
+    cursor: pointer;
+    background-color: #ddd6d6;
+}
+/* #defaultI {
+    /* display: block; */
+
+.show {display: block;}
+
+
+ul{
+    margin: 0;
+    padding: 0; 
+    list-style : none;
+}
+ul li {
+    position: relative;
+    padding: 16px 48px;
+}
+ul li::before{
+    position: absolute;
+    content:"";
+    width: 0;
+    height: 0;
+    border: 8px solid;
+    border-color:inherit;
+    border-radius: 10px;
+    left: 20px;
+    
+}
