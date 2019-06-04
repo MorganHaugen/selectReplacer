@@ -20,38 +20,45 @@ function listCreator(){
     document.querySelector(".dropdown").appendChild(dropbtn);
     document.querySelector(".dropdown").appendChild(outerList);
     //create li with same name & content as option, 
-    for( part of originalContent){
+    for( let i=0; i<originalContent.length; i++){
         
         const list = document.createElement('li');
-        list.className = part.className + "New";
+        part = document.querySelector(".selectClass");
+        list.className = part[i].className + "New";
 
         
-        list.id = part.id;
-        list.value = part.value;
-        list.textContent = part.textContent;
-        list.style.borderColor = part.id;
+        list.id = part[i].id;
+        list.value = part[i].value;
+        list.textContent = part[i].textContent;
+        list.style.borderColor = part[i].id;
     
       
         document.querySelector(".selectNew").appendChild(list);   
     }
-    
 }
 
 
 const dropdowns = document.getElementsByClassName("selectNew");
 const select = document.getElementsByClassName("dropbtn")[0];
+const window = document.get;
 function dropdownToggle() {  
     document.querySelector('.selectNew').classList.toggle("show"); 
 }
+function hideDropdown() {
+    document.querySelector('.selectNew').classList.style.display.none;
+}
 select.addEventListener("click", dropdownToggle);
+window.addEventListener("click", hideDropdown);
 
 const options = document.querySelectorAll('.dropdown ul li');
 // document.querySelector(".dropdown")
-for (option of options) {
-    option.addEventListener("click", function (event) {
+for (let j=0; j<options.length; j++) {
+    option=document.querySelector('.dropdown ul li');
+    dropdowns[j].addEventListener("click", function (event) {
         const listButton = event.target;
         document.querySelector(".dropbtn").textContent = listButton.textContent;
         document.querySelector(".dropbtn").style.borderColor = listButton.style.borderColor;
 });
+
 }
 
